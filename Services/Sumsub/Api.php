@@ -12,9 +12,9 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use function GuzzleHttp\Psr7\stream_for;
 
-define('SUMSUB_SECRET_KEY', decryptRSA(config('settings.sumsub_secret_key')));
+define('SUMSUB_SECRET_KEY', config('settings.sumsub_secret'));
 define('SUMSUB_APP_TOKEN', config('settings.sumsub_token'));
-define('SUMSUB_BASE_URL', 'https://api.sumsub.com');
+define('SUMSUB_BASE_URL', config('settings.sumsub_base'));
 
 class Api
 {
